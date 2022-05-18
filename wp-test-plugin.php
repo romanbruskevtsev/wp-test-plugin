@@ -11,7 +11,7 @@
 * Plugin Name:       Test Plugin
 * Plugin URI:        https://github.com/romanbruskevtsev/wp-test-plugin
 * Description:       Simple WP Test Plugin
-* Version:           1.0.2
+* Version:           1.0.3
 * Requires at least: 5.2
 * Requires PHP:      7.3
 * Author:            Roman Bruskevtsev
