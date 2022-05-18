@@ -91,6 +91,7 @@ class WP_Test_Plugin_Updater {
                     ),
                     'download_link'     => $this->github_response['zipball_url']
                 );
+
                 return (object) $plugin;
             }
         }   
@@ -109,5 +110,4 @@ class WP_Test_Plugin_Updater {
         }
         return $result;
     }
-
 }
