@@ -38,9 +38,7 @@ class WP_Test_Plugin_Updater {
             if( is_array( $response ) ) {
                 $response = current( $response );
             }
-            if( $this->authorize_token ) {
-                $response['zipball_url'] = add_query_arg( 'access_token', $this->authorize_token, $response['zipball_url'] );
-            }
+            
             $this->github_response = $response;
         }
     }
@@ -61,7 +59,7 @@ class WP_Test_Plugin_Updater {
                     $new_files = $this->github_response['zipball_url'];
                     $slug = current( explode('/', $this->basename ) );
                     $plugin = array(
-                        'url' => $this->plugin["PluginURI"],
+                        'url' => $this->plugin['PluginURI'],
                         'slug' => $slug,
                         'package' => $new_files,
                         'new_version' => $this->github_response['tag_name']
